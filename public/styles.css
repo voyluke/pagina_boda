@@ -1,11 +1,11 @@
 :root {
-  --ink: #0e2841;
-  --cream: #f8f4ef;
-  --soft: #e8e8e8;
-  --teal: #156082;
+  --ink: #2a1a28;
+  --cream: #f0ece9;
+  --soft: #e0dbd8;
+  --plum: #5c1040;
   --terracotta: #e97132;
   --white: #ffffff;
-  --shadow: 0 16px 40px rgba(14, 40, 65, 0.14);
+  --shadow: 0 16px 40px rgba(92, 16, 64, 0.12);
 }
 
 * {
@@ -32,7 +32,7 @@ body {
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--ink);
-  background: linear-gradient(180deg, var(--cream) 0%, #f2ece5 100%);
+  background: linear-gradient(180deg, var(--cream) 0%, #e8e3e0 100%);
   line-height: 1.65;
 }
 
@@ -50,9 +50,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 15;
-  background: rgba(248, 244, 239, 0.95);
+  background: rgba(240, 236, 233, 0.96);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(14, 40, 65, 0.08);
+  border-bottom: 1px solid rgba(92, 16, 64, 0.12);
   padding: 0.65rem 0;
 }
 
@@ -72,7 +72,7 @@ img {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--plum);
   text-decoration: none;
   padding: 0.35rem 0.15rem;
   border-bottom: 2px solid transparent;
@@ -104,7 +104,7 @@ img {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(14, 40, 65, 0.7), rgba(21, 96, 130, 0.25));
+  background: linear-gradient(160deg, rgba(92, 16, 64, 0.82), rgba(50, 6, 30, 0.38));
 }
 
 .hero-content {
@@ -114,11 +114,12 @@ img {
 }
 
 .eyebrow {
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 0.3rem;
-  font-size: 0.85rem;
-  color: var(--terracotta);
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 0rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 h1,
@@ -130,13 +131,14 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 7vw, 5.6rem);
-  font-weight: 600;
-  color: var(--terracotta);
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(3.8rem, 10vw, 8rem);
+  font-weight: 400;
+  color: var(--white);
 }
 
 h1 span {
-  color: var(--terracotta);
+  color: var(--white);
 }
 
 .hero-date {
@@ -164,17 +166,61 @@ h1 span {
 
 .btn-outline {
   background: transparent;
-  color: var(--teal);
-  border: 1px solid rgba(21, 96, 130, 0.45);
+  color: var(--plum);
+  border: 1px solid rgba(92, 16, 64, 0.45);
 }
 
 .btn-outline:hover {
   opacity: 1;
-  background: rgba(21, 96, 130, 0.08);
+  background: rgba(92, 16, 64, 0.08);
 }
 
 .section {
   padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+}
+
+/* ── Plum band (matches page 2 of the printed invitation) ── */
+.plum-section {
+  background: var(--plum);
+  color: var(--white);
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+}
+
+.plum-section h2 {
+  color: var(--white);
+}
+
+.plum-section .intro-message {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.plum-section .parents-names {
+  color: var(--white);
+}
+
+.plum-section .parents-connector {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.plum-section .intro-detail {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.plum-section .details-box {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 1rem 1.8rem;
+}
+
+.plum-sparkle {
+  font-size: 1.4rem;
+  opacity: 0.6;
+  display: block;
+  text-align: right;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.5rem;
 }
 
 .intro {
@@ -197,7 +243,7 @@ h1 span {
   font-size: clamp(1.35rem, 2.4vw, 1.85rem);
   line-height: 1.6;
   letter-spacing: 0.01em;
-  color: rgba(14, 40, 65, 0.92);
+  color: rgba(42, 26, 40, 0.92);
 }
 
 .parents-names,
@@ -215,13 +261,13 @@ h1 span {
 .intro-detail {
   margin: 0.2rem 0;
   font-size: 1rem;
-  color: rgba(14, 40, 65, 0.8);
+  color: rgba(42, 26, 40, 0.8);
 }
 
 .parents-names {
   margin: 0.45rem 0 0.2rem;
   font-weight: 600;
-  color: var(--teal);
+  color: var(--plum);
 }
 
 .parents-connector {
@@ -229,7 +275,7 @@ h1 span {
   margin: 0.2rem 0;
   font-weight: 400;
   font-size: 1rem;
-  color: rgba(14, 40, 65, 0.5);
+  color: rgba(42, 26, 40, 0.5);
   font-style: italic;
 }
 
@@ -249,7 +295,7 @@ h1 span {
 
 .card h3,
 .support-card h2 {
-  color: var(--teal);
+  color: var(--plum);
   font-size: clamp(1.7rem, 3vw, 2.2rem);
 }
 
@@ -301,6 +347,7 @@ h1 span {
 .timeline h2 {
   text-align: center;
   font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--plum);
 }
 
 .timeline-grid {
@@ -318,7 +365,7 @@ h1 span {
 
 .timeline-col span {
   font-weight: 600;
-  color: var(--teal);
+  color: var(--plum);
 }
 
 .lodging {
@@ -328,12 +375,13 @@ h1 span {
 .lodging-title {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 0.75rem;
+  color: var(--plum);
 }
 
 .lodging-intro {
   max-width: 680px;
   margin: 0 auto 2rem;
-  color: rgba(14, 40, 65, 0.88);
+  color: rgba(42, 26, 40, 0.88);
 }
 
 .lodging-rows {
@@ -392,7 +440,7 @@ h1 span {
 }
 
 .hotel-card h3 {
-  color: var(--teal);
+  color: var(--plum);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin-bottom: 0.5rem;
 }
@@ -403,7 +451,7 @@ h1 span {
 
 .hotel-inline-tel,
 .hotel-contact-link {
-  color: var(--teal);
+  color: var(--plum);
   font-weight: 600;
   text-decoration: none;
 }
@@ -419,14 +467,14 @@ h1 span {
 }
 
 .hotel-placeholder {
-  color: rgba(14, 40, 65, 0.45);
+  color: rgba(42, 26, 40, 0.45);
   font-weight: 400;
 }
 
 .hotel-card__link-wrap {
   margin-top: 0.5rem;
   padding-top: 0.65rem;
-  border-top: 1px solid rgba(14, 40, 65, 0.1);
+  border-top: 1px solid rgba(42, 26, 40, 0.1);
 }
 
 .hotel-card__link-wrap--split {
@@ -437,7 +485,7 @@ h1 span {
 }
 
 .hotel-card__link-sep {
-  color: rgba(14, 40, 65, 0.35);
+  color: rgba(42, 26, 40, 0.35);
   font-weight: 600;
   user-select: none;
 }
@@ -456,6 +504,40 @@ a.hotel-card__link:hover {
   text-decoration: underline;
 }
 
+.hotel-costs {
+  margin: 0.2rem 0;
+  border: 1px solid rgba(92, 16, 64, 0.18);
+  border-radius: 8px;
+  padding: 0 0.75rem;
+}
+
+.hotel-costs summary {
+  font-weight: 600;
+  color: var(--plum);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hotel-costs summary::before {
+  content: "▸";
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.hotel-costs[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.hotel-costs p {
+  margin: 0.25rem 0 !important;
+  padding-bottom: 0.1rem;
+}
+
 .support {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -465,7 +547,7 @@ a.hotel-card__link:hover {
 .footer {
   text-align: center;
   padding: 1.8rem 1rem 2.2rem;
-  color: rgba(14, 40, 65, 0.9);
+  color: rgba(42, 26, 40, 0.9);
 }
 
 .hidden {
@@ -475,7 +557,7 @@ a.hotel-card__link:hover {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(14, 40, 65, 0.6);
+  background: rgba(92, 16, 64, 0.65);
   display: grid;
   place-items: start center;
   overflow-y: auto;
@@ -504,7 +586,7 @@ a.hotel-card__link:hover {
 
 .modal-card h3 {
   font-size: clamp(1.9rem, 4vw, 2.4rem);
-  color: var(--teal);
+  color: var(--plum);
   margin-bottom: 0.2rem;
 }
 
@@ -530,19 +612,19 @@ a.hotel-card__link:hover {
 
 .rsvp-form label {
   font-weight: 600;
-  color: var(--teal);
+  color: var(--plum);
 }
 
 .rsvp-form input {
   padding: 0.7rem 0.75rem;
-  border: 1px solid rgba(14, 40, 65, 0.24);
+  border: 1px solid rgba(42, 26, 40, 0.24);
   border-radius: 10px;
   font-size: 1rem;
 }
 
 .rsvp-form select {
   padding: 0.7rem 0.75rem;
-  border: 1px solid rgba(14, 40, 65, 0.24);
+  border: 1px solid rgba(42, 26, 40, 0.24);
   border-radius: 10px;
   font-size: 1rem;
   background: var(--white);
