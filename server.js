@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 // ── Contraseña ──────────────────────────────────────────────────
 // Para cambiarla, define la variable de entorno SITE_PASSWORD.
 // Ejemplo: SITE_PASSWORD=MiContrasena node server.js
-const SITE_PASSWORD = process.env.SITE_PASSWORD || 'boda2026';
+const SITE_PASSWORD = process.env.SITE_PASSWORD || 'bodaAMyM2026';
 
 function tokenFor(pwd) {
   return crypto.createHash('sha256').update('anaMar-Mario-' + pwd).digest('hex');
@@ -178,6 +178,6 @@ app.get(/.*/, (_req, res) => {
 app.listen(port, () => {
   console.log(`Wedding site running at http://localhost:${port}`);
   if (!process.env.SITE_PASSWORD) {
-    console.log(`🔑  Contraseña por defecto: "boda2026" — define SITE_PASSWORD para cambiarla.`);
+    console.log(`🔑  Contraseña por defecto: "bodaAMyM2026" — define SITE_PASSWORD para cambiarla.`);
   }
 });
